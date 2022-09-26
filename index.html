@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+    <div class="container">
+        <div class="lhs">
+            <div class="leftarrow">
+                <span class="arrow" id="leftarr">&#60</span>
+            </div>
+            <div class="calendar">
+                <div class="headings">
+                    <h2 id="ecalendar">eCalendar</h2>
+                    <h2 id="ecal">2019</h2>
+                </div>
+                <div class="topmonths">
+                    <h4 class="prev">October</h4>
+                    <h4>November</h4>
+                    <h4 class="prev" >December</h4>
+                </div>
+                <div class="hr"><hr></div>
+                <div class="days">
+                    <div class="weekend">Sun</div>
+                    <div class="weekdays" class="selected_day">Mon</div>
+                    <div class="weekdays" >Tue</div>
+                    <div class="weekdays">Wed</div>
+                    <div class="weekdays">Thur</div>
+                    <div class="weekdays">Fri</div>
+                    <div class="weekend">Sat</div>
+                </div>
+                <div class="dates">
+                
+                    <div class ="weekend " >27</div>
+                    <div class ="prevdate " >28</div>
+                    <div class ="prevdate " >29</div>
+                    <div class ="prevdate " >30</div>
+                    <div class="prevdate"> 31</div>
+                    <div class="weekday">1</div>
+                    <div class="weekend">2</div>
+                    <div class="weekend">3</div>
+                    <div  class="weekday">4</div>
+                    <div class="weekday">5</div>
+                    <div class="weekday">6</div>
+                    <div class="weekday">7</div>
+                    <div class="weekday">8</div>
+                    <div class="weekend">9</div>
+                    <div class="weekend">10</div>
+                    <div class="weekday">11</div>
+                    <div class="weekday">12</div>
+                    <div class="weekday">13</div>
+                    <div class="weekday">14</div>
+                    <div class="weekday">15</div>
+                    <div class="weekend">16</div>
+                    <div class="weekend">17</div>
+                    <div class="weekday">18</div>
+                    <div class="weekday">19</div>
+                    <div class="weekday">20</div>
+                    <div class="weekday">21</div>
+                    <div class="weekday">22</div>
+                    <div class="weekend">23</div>
+                    <div class="weekend">24</div>
+                    <div class="today" class="weekend">25</div>
+                    <div class="weekday">26</div>
+                    <div class="weekday">27</div>
+                    <div class="weekday">28</div>
+                    <div class="weekday">29</div>
+                    <div class="weekend">30</div>
+                    <div class="weekend">31</div>
+                  </div>
+
+            </div>
+            <div class="rightarrow">
+                <span class="arrow" id="rightarr" >&#62</span>
+            </div>
+        </div>
+
+            <div id="centrepopup" class="centrepopup"></div>
+
+        <div class="rhs">
+            <div class="signin">
+                <h3>Sign-in</h3>
+            </div>
+            <div class="currentstat">
+                <h2 id="currentday">Monday</h2>
+                <h2 id="monthanddate">NOVEMBER 25</h2>
+            </div>
+            <div class="eventlist">
+                <div class="eventdates">
+                    <ul>
+                        <li>5</li>
+                        <li>18</li>
+                        <li>23</li>
+                    </ul>
+                </div>
+                <div class="eventline"></div>
+                <div class="eventbox">
+                    <ul>
+                        <li>Dentist's Appointment</li>
+                        <li>Ashley's Birthday</li>
+                        <li>Proposal Date</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="addanevent">
+                <h2 id="add">Add an Event</h2>
+                <div class="button"><button id="addbutton" onclick="openpopup()">&#43</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="mypopup">
+        
+        <h1 id="event">Event</h1>
+        <button type="button" class="btn_cancel" onclick="closepopup()">&times</button>
+        <hr>
+        <div class="titles">
+            <h3 class="highlight">Start Date</h3>
+            <div class="dropupm">
+                <h3 >Month <span class="dropmonths" onclick="openmonths()">&#9660</span> </h3>
+                <div class="dropup-content" id="dropup-content">
+                    <ul>
+                        <li>Jan</li>
+                        <li>Feb</li>
+                        <li>Mar</li>
+                        <li>April</li>
+                        <li>May</li>
+                        <li>June</li>
+                        <li>July</li>
+                        <li>Aug</li>
+                        <li>Sept</li>
+                        <li>Oct</li>
+                        <li>Nov</li>
+                        <li>Dec</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropupd">
+                <h3>Day <span class="dropdays" onclick="opendays()">&#9660</span></h3>
+                <div class="dropup-content-days" id="dropup-content-days">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <h3 class="highlight">End Date</h3>
+            <div class="dropupm">
+                <h3 >Month <span class="dropmonths" onclick="openmonths2()">&#9660</span> </h3>
+                <div class="dropup-content" id="dropup-content2">
+                    <ul>
+                        <li>Jan</li>
+                        <li>Feb</li>
+                        <li>Mar</li>
+                        <li>April</li>
+                        <li>May</li>
+                        <li>June</li>
+                        <li>July</li>
+                        <li>Aug</li>
+                        <li>Sept</li>
+                        <li>Oct</li>
+                        <li>Nov</li>
+                        <li>Dec</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropupd">
+                <h3>Day <span class="dropdays" onclick="opendays2()">&#9660</span></h3>
+                <div class="dropup-content-days" id="dropup-content-days2">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                    </ul>
+                </div>
+            </div>   
+            
+        </div>
+
+        <div class="popupbox">
+            <img src="images/logo.PNG" alt="">
+            <ul>
+                <li>People</li>
+                <li>Location</li>
+                <li>Description</li>
+            </ul>
+        </div>
+
+        <button id="saveevent"> Save Event</button>
+       
+    
+    
+        
+      </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

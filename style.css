@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    
+}
+
+.lhs{
+    flex-basis: 90%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 100px; 
+    
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    font-weight: 900px;
+    color: #26B9CC;
+    /* font-size: 40px;
+    font-weight: 600; */
+}
+
+.arrow:hover{
+  cursor: pointer;
+}
+
+#rightarr{
+    position: absolute;
+    right: 600px;
+}
+
+#leftarr{
+    position: absolute;
+    left: 30px;
+}
+
+
+
+.calendar{
+    width:800px;
+    height:70vh;
+    align-items: center;
+    background-color: white;
+}
+
+.headings{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#ecal{
+    font-weight: 300;
+    color: #26B9CC;
+}
+
+#ecalendar{
+    font-size: 35px;
+    color: #26B9CC;
+}
+
+.topmonths{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.topmonths h4{
+    width: 90%;
+    text-align: center;
+    color: #26B9CC;
+}
+
+.topmonths .prev{
+    color:  #696868;
+}
+
+
+
+.hr {
+    width: 799px;
+    
+}
+
+.days{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+.dates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 335px;
+}
+
+.days div{
+    width: 14.28%;
+    text-align: center;
+}
+
+.dates div{
+    width: 14.28%;
+    text-align: center;
+    
+}
+
+.weekend{
+   color: #7cc0c9;
+}
+
+.weekdays{
+    color: #839395;
+    
+}
+
+.weekday{
+  text-align: center;
+}
+
+.today{
+  color:white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background-color:#26B9CC;
+  }
+
+
+.rhs{
+    flex-basis: 50%;
+    background-image: linear-gradient(180deg, rgba(209, 226, 188, 0.9) 0%, rgba(255, 255, 255, 0) 100%, rgba(160, 236, 247, 0.5)), url(images/mountain.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.signin{
+    color: white;
+    margin-top: 30px;
+    margin-left: 85%;
+}
+
+.signin:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.currentstat{
+    color: white;
+    margin-left: 100px;
+    margin-top: 50px;
+    display: block;
+}
+
+#currentday, #monthanddate{
+   padding-bottom: 30px;
+    
+}
+
+#currentday{
+    font-weight: 300;
+}
+
+#monthanddate{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.eventlist{
+    display: flex;
+    align-items: center;
+    
+}
+
+.eventdates ul{
+    text-align: center;
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    margin-left: 5px;
+    font-weight: 950;
+}
+
+.eventdates li{
+    padding: 20px;
+}
+
+.eventline{
+    border-left: 6px solid white;
+    height: 250px;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.eventbox{
+    background-color: rgba(48, 46, 46, 0.462);
+    width: 200px;
+    height: 300px;
+    
+}
+
+.eventbox ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    list-style: none;
+}
+
+.eventbox ul li{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 30px;
+    margin: 0;
+    text-align: left;
+}
+
+.addanevent{
+    padding: 20px;
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+    margin-left: 130px;
+}
+
+#add{
+    padding: 20px;
+}
+
+button{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: aqua;
+    background-color: white;
+    /* for cursor change */
+    cursor: pointer;
+    /* to remove that irregular border */
+    border: 0;
+    
+    /* align-items: center; */
+    /* text-align: center; */
+    /* justify-content: center; */
+}
+
+.popup {
+    padding: 120px;
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background-color: white;
+    
+
+  }
+
+  .titles{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  .popup li{
+    list-style: none;
+  }
+
+  .btn_cancel{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #26B9CC;
+  }
+
+  #event{
+    width: 600px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+ 
+
+  .popupbox{
+    padding-top: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  .popup img{
+    height: 100px;
+  }
+
+  .popup ul{
+    padding-top: 19px;
+  }
+
+  .popup ul li{
+    
+    padding-bottom: 20px;
+    text-align: left;
+  }
+
+  #saveevent{
+    width: 133px;
+    height: 32px;
+    margin-left: 580px;
+    font-size: 20px;
+    background-color:#26B9CC;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .highlight{
+    color: #26B9CC;
+  }
+
+  /* .dropmonths{
+    display: none;
+  } */
+
+  .dropmonths{
+    position: fixed;
+    cursor: pointer;
+    display: none;
+  }
+
+  .dropdays{
+    position: fixed;
+    cursor: pointer;
+    display: none;
+  }
+
+
+  .dropupm:hover .dropmonths {
+    display: inline;
+  }
+
+  .dropupd:hover .dropdays{
+    display: inline;
+  }
+
+  .dropup-content{
+    display: none;
+    position: absolute;
+    top: 0px;
+    max-height: 200px;
+    overflow: scroll;
+    width: 100px;
+    scroll-behavior: auto;
+    background-color: black;
+    color: white;
+  }
+
+  .dropup-content .opendropupcontent{
+    display: block;
+  }
+
+/* 
+  .dropupd:hover .dropup-content-days{
+    display: block;
+  } */
+
+  .dropup-content-days{
+    display: none;
+    position: absolute;
+    top: 0px;
+    max-height: 200px;
+    overflow: scroll;
+    width: 100px;
+    scroll-behavior: auto;
+    background-color: black;
+    color: white;
+  }
+
+  
+
+   /* .popup ul{
+    margin-left: 0px;    
+    padding-top: 20px;
+    background-color: red;
+  } */
+
+  /* .popup ul li{
+    padding-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+     
+  } */
+
+  /* .popup ul li img{ */
+     /* width: 30px; */
+     
+     /* height: 30px; */
+     
+     /* align-items: center; */
+     /* justify-content: center; */
+     /* text-align: center; */
+     /* display: flex; */
+     /* flex-direction: row; */
+     /* margin-right: 10px; */
+  /* }  */
+  
+ 
+
+
+
+ 
+
+
+
+
